@@ -14,7 +14,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 let socketConnect = new Set()
 io.on('connection',onConnect)
 
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html')); 
