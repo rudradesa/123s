@@ -21,8 +21,9 @@ app.get('/', (req, res) => {
   app.get('/about', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'about.html'));  // Serve 'home.html'
   });
-
-
+  app.get('/loaderio-521a15eedf402ded1fb8881f3891d4bb', (req, res) => {
+  res.sendFile(path.join(__dirname, 'loaderio-521a15eedf402ded1fb8881f3891d4bb.txt'));
+});
 function onConnect(socket){
     console.log(socket.id);
     socketConnect.add(socket.id)
