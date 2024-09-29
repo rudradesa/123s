@@ -15,7 +15,7 @@ let socketConnect = new Set()
 io.on('connection',onConnect)
 
 
-app.get('/', (req, res) => {
+app.get('/loaderio-521a15eedf402ded1fb8881f3891d4bb/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html')); 
   });
   app.get('/about', (req, res) => {
