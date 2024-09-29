@@ -15,12 +15,13 @@ let socketConnect = new Set()
 io.on('connection',onConnect)
 
 
-app.get('/loaderio-521a15eedf402ded1fb8881f3891d4bb/', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html')); 
   });
   app.get('/about', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'about.html'));  // Serve 'home.html'
   });
+
 
 function onConnect(socket){
     console.log(socket.id);
